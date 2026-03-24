@@ -1,21 +1,38 @@
 # Build output
-**/bin/
-**/obj/
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/out/
+**/[Pp]ublish/
+artifacts/
+BenchmarkDotNet.Artifacts/
 
 # Test output
 TestResults/
+**/TestResults/
 *.coverage
+*.coveragexml
 *.trx
+coverage/
+coverage-*/
 
 # User-specific IDE files
 .idea/
 .vs/
+.vscode/
 *.user
 *.rsuser
 *.suo
 *.userosscache
 *.sln.docstates
 *.DotSettings.user
+*.sln.iml
+_ReSharper*/
+*.ncrunch*
+_NCrunch_*
 
 # Local databases
 *.sqlite
@@ -27,3 +44,4 @@ TestResults/
 
 # OS files
 .DS_Store
+Thumbs.db
