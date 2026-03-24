@@ -42,7 +42,6 @@ public sealed class TodoApiFactoryFixture: WebApplicationFactory<Program>, IAsyn
     Task IAsyncLifetime.DisposeAsync()
     {
         Client.Dispose();
-        base.Dispose();
 
         if (File.Exists(_databasePath))
         {
