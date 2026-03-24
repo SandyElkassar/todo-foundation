@@ -1,5 +1,47 @@
-# Object file
-*.o
+# Build output
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/out/
+**/[Pp]ublish/
+artifacts/
+BenchmarkDotNet.Artifacts/
 
-# Ada Library Information
-*.ali
+# Test output
+TestResults/
+**/TestResults/
+*.coverage
+*.coveragexml
+*.trx
+coverage/
+coverage-*/
+
+# User-specific IDE files
+.idea/
+.vs/
+.vscode/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+*.sln.iml
+_ReSharper*/
+*.ncrunch*
+_NCrunch_*
+
+# Local databases
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
