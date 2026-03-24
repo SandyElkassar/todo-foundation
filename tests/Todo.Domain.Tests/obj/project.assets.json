@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "AwesomeAssertions/9.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AwesomeAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AwesomeAssertions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "coverlet.collector/6.0.2": {
         "type": "package",
         "build": {
@@ -438,6 +451,34 @@
     }
   },
   "libraries": {
+    "AwesomeAssertions/9.4.0": {
+      "sha512": "dJxkWiQ8D+xT6Gr2sSL83+Mar+Vpy2JTcUPxFcckpPJ8VYBfSgnk+zqpS6t7kcGnjz8NLyF14qfuoL4bKzzoew==",
+      "type": "package",
+      "path": "awesomeassertions/9.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AwesomeAssertions.png",
+        "README.md",
+        "awesomeassertions.9.4.0.nupkg.sha512",
+        "awesomeassertions.nuspec",
+        "lib/net47/AwesomeAssertions.dll",
+        "lib/net47/AwesomeAssertions.pdb",
+        "lib/net47/AwesomeAssertions.xml",
+        "lib/net6.0/AwesomeAssertions.dll",
+        "lib/net6.0/AwesomeAssertions.pdb",
+        "lib/net6.0/AwesomeAssertions.xml",
+        "lib/net8.0/AwesomeAssertions.dll",
+        "lib/net8.0/AwesomeAssertions.pdb",
+        "lib/net8.0/AwesomeAssertions.xml",
+        "lib/netstandard2.0/AwesomeAssertions.dll",
+        "lib/netstandard2.0/AwesomeAssertions.pdb",
+        "lib/netstandard2.0/AwesomeAssertions.xml",
+        "lib/netstandard2.1/AwesomeAssertions.dll",
+        "lib/netstandard2.1/AwesomeAssertions.pdb",
+        "lib/netstandard2.1/AwesomeAssertions.xml"
+      ]
+    },
     "coverlet.collector/6.0.2": {
       "sha512": "bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
       "type": "package",
@@ -989,6 +1030,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AwesomeAssertions >= 9.4.0",
       "FluentAssertions >= 8.9.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
       "Todo.Domain >= 1.0.0",
@@ -1044,6 +1086,10 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "AwesomeAssertions": {
+            "target": "Package",
+            "version": "[9.4.0, )"
+          },
           "FluentAssertions": {
             "target": "Package",
             "version": "[8.9.0, )"

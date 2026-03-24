@@ -11,6 +11,6 @@ public class CreateTodoHandler(AppDbContext db) : ICreateTodoHandler
         var item = new TodoItem(request.Title, request.Description, request.DueDate);
         await db.TodoItems.AddAsync(item, cancellationToken);
         await db.SaveChangesAsync(cancellationToken);
-        return new CreateTodoResult(item.Id, item.Title, item.Description, item.IsDone, item.CreatedAt, item.UpdatedAt, item.DueDate);
+        return await Task.FromResult(new CreateTodoResult(item.Id, item.Title, item.Description, item.IsDone, item.CreatedAt, item.UpdatedAt, item.DueDate));
     }
 }

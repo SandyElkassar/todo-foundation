@@ -13,3 +13,4 @@
 /Users/sandk/Study/todo-foundations/src/Todo.Application/obj/Debug/net9.0/refint/Todo.Application.dll
 /Users/sandk/Study/todo-foundations/src/Todo.Application/obj/Debug/net9.0/Todo.Application.pdb
 /Users/sandk/Study/todo-foundations/src/Todo.Application/obj/Debug/net9.0/ref/Todo.Application.dll
+/Users/sandk/Study/todo-foundations/src/Todo.Application/obj/Debug/net9.0/Todo.Application.sourcelink.json

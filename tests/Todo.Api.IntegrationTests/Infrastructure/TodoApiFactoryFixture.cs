@@ -9,17 +9,20 @@ namespace Todo.Api.IntegrationTests.Infrastructure;
 
 public sealed class TodoApiFactoryFixture: WebApplicationFactory<Program>, IAsyncLifetime
 {
-    private readonly string databasePath = Path.Combine(Path.GetTempPath(), $"{Guid.NewGuid():N}.sqlite");
+    private string _databasePath = null!;
 
     public HttpClient Client { get; private set; } = null!;
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        builder.ConfigureAppConfiguration((_, configBuilder) =>
+        builder.ConfigureAppConfiguration((context, configBuilder) =>
         {
+            _databasePath = Path.Combine(context.HostingEnvironment.ContentRootPath, "Database", "test.sqlite");
+
             configBuilder.AddInMemoryCollection(new Dictionary<string, string?>
             {
-                ["ConnectionStrings:DefaultConnection"] = $"Data Source={databasePath}"
+                // The API reads DefaultConnection, so point it at the dedicated test database.
+                ["ConnectionStrings:DefaultConnection"] = $"Data Source={_databasePath};Cache=Shared"
             });
         });
     }
@@ -28,10 +31,12 @@ public sealed class TodoApiFactoryFixture: WebApplicationFactory<Program>, IAsyn
     {
         Client = CreateClient();
 
+        Directory.CreateDirectory(Path.GetDirectoryName(_databasePath)!);
+
         using var scope = Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         await db.Database.EnsureDeletedAsync();
-        await db.Database.EnsureCreatedAsync();
+        await db.Database.MigrateAsync();
     }
 
     Task IAsyncLifetime.DisposeAsync()
@@ -39,9 +44,9 @@ public sealed class TodoApiFactoryFixture: WebApplicationFactory<Program>, IAsyn
         Client.Dispose();
         base.Dispose();
 
-        if (File.Exists(databasePath))
+        if (File.Exists(_databasePath))
         {
-            File.Delete(databasePath);
+            File.Delete(_databasePath);
         }
 
         return Task.CompletedTask;

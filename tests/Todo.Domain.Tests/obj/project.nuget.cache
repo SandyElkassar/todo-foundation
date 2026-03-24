@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OwMtexEh4KM=",
+  "dgSpecHash": "wUZoiAUu570=",
   "success": true,
   "projectFilePath": "/Users/sandk/Study/todo-foundations/tests/Todo.Domain.Tests/Todo.Domain.Tests.csproj",
   "expectedPackageFiles": [
+    "/Users/sandk/.nuget/packages/awesomeassertions/9.4.0/awesomeassertions.9.4.0.nupkg.sha512",
     "/Users/sandk/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/Users/sandk/.nuget/packages/fluentassertions/8.9.0/fluentassertions.8.9.0.nupkg.sha512",
     "/Users/sandk/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",

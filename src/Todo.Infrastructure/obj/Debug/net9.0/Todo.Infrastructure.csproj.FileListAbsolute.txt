@@ -15,3 +15,4 @@
 /Users/sandk/Study/todo-foundations/src/Todo.Infrastructure/obj/Debug/net9.0/refint/Todo.Infrastructure.dll
 /Users/sandk/Study/todo-foundations/src/Todo.Infrastructure/obj/Debug/net9.0/Todo.Infrastructure.pdb
 /Users/sandk/Study/todo-foundations/src/Todo.Infrastructure/obj/Debug/net9.0/ref/Todo.Infrastructure.dll
+/Users/sandk/Study/todo-foundations/src/Todo.Infrastructure/obj/Debug/net9.0/Todo.Infrastructure.sourcelink.json
