@@ -1,5 +1,24 @@
-# Object file
-*.o
+# Build output
+**/bin/
+**/obj/
 
-# Ada Library Information
-*.ali
+# Test output
+TestResults/
+*.coverage
+*.trx
+
+# User-specific IDE files
+.idea/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+
+# Local databases
+*.sqlite
+*.db
+
+# OS files
+.DS_Store
